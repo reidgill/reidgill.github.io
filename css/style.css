@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous');
 @import url('https://fonts.googleapis.com/css?family=ABeeZee|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
 
 html, body {
 	margin: 0;
@@ -9,20 +10,29 @@ html, body {
 }
 
 body {
-	font-family: 'ABeeZee|Righteous', sans-serif;
+
 }
 
 .intro {
-	height: 100%;
+	z-index: -1;
+
+	min-height: 100%;
 	width: 100%;
 	margin: auto;
 	background: url('../img/lighthouse.JPG') no-repeat 50% 50%;
+	background-attachment: fixed;
 	display: table;
 	top: 0;
 	background-size: cover;
+	font-family: 'ABeeZee|Righteous', sans-serif;
 }
 
+
+
 .splash {
+	z-index: 0;
+	margin-top: 5vw;
+	position: fixed;
 	display: table-cell;
 	vertical-align: middle;
 	width: 100%;
@@ -45,10 +55,6 @@ body {
 	line-height: 70%
 }
 
-.center {
-	font-family: 'ABeeZee|Righteous', sans-serif;
-	text-align: center;
-}
 
 .btn {
 	font-family: 'ABeeZee|Righteous', sans-serif;
@@ -71,26 +77,34 @@ body {
 }
 
 .website-body{
-	font-family: 'ABeeZee|Righteous', sans-serif;
+
 	width: 100%;
 	margin: 0 auto;
-
+	z-index: 2;
 	font-size: 20px;
 	line-height: 30px;
-	text-align: justify;
+	background-color: #fff;
 }
 
 p {
 
 	font-size: 100%;
+	
+}
+
+.doublespace {
 	line-height: 200%;
-	font-family: sans-serif;
+}
+
+.font-righteous {
+	font-family: 'ABeeZee|Righteous', sans-serif;
 }
 
 
 .parallax {
-	padding: 100px 45px;
+	padding: 100px 2% 100px 2%;
     background: transparent;
+   align-content: center;
 }
 
 .info{
@@ -98,6 +112,7 @@ p {
 	text-align: center;
 	position: relative;
 	color: #ffffff;
+	padding: 300px 0px;
 }
 
 .logo {
@@ -109,22 +124,134 @@ p {
 	font-size: 24px;
 }
 
+.about-me{
+	z-index: 2;
+	width: 100%;
+	padding: 0%;
+	position: relative;
+	background-color: #fff;
+}
+
+.blog-div{
+	z-index: 2;
+	width: 100%;
+
+	position: relative;
+	background-color: #fff;
+}
+
+.mini-header {
+	font-family: 'Righteous', sans-serif;
+	color: #e65c00;
+	text-align: center;
+	font-size: 200%
+}
+
+.profilepic-container {
+	display: inline-block;
+	/*picture should take up left half or top*/
+	width: 45%; 
+	margin: 1%;
+} 
+
 .profilepic {
-	width: 50%;
-	height: 400px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	background-image: url('../img/Reid.JPG');
-	background-repeat: no-repeat;
-	background-size: contain;
+	/*display: inline-block;
+	/*picture should take up left half or top*/
+	width: 100%;
+	/*border for pic
+	border: solid #e65c00;
+	border-width: 8px;
+	border-radius: 7px; */
+
 	
+/*	margin-left: auto;
+	margin-right: auto;*/
+	/*background-image: url('../img/Reid.JPG');
+	background-repeat: no-repeat;
+	background-size: contain; */
+	
+}
+
+.caption {
+	display: block;
+	text-align: center;
+	font-style: italic;
+	font-weight: 5000;
+
+}
+
+.center {
+	text-align: center;
+}
+.about-me-text{
+	/*float:right; */
+
+	display: inline-block;
+	width: 45%;
+	margin: 1%;
+	vertical-align: top;
+	font-family: 'Cabin', sans-serif;
+}
+
+.readable-text {
+	font-size: 150%;
+		text-align: justify;
+}
+
+.floating-box {
+	z-index: 2;
+	position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 25px 25px;
+    border: 0px 0px;  
+    border-radius: 10px;
+    vertical-align: top;
+    color: #e65c00;
+    background-color: #fff;
+    opacity: 0.75;
+    text-align: center;
+}
+
+.floating-box2 {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}
+
+
+.floating-box-icon {
+	position: relative;
+    font-size: 600%;
+    margin: 25px 10px;
+    vertical-align: top;
+    color: #222;
+}
+
+.floating-box-text {
+	position: relative;
+	display: inline-block;
+	font-size: 200%;
+	font-family: 'Righteous', sans-serif;
+	text-align: center;
+	vertical-align: bottom;
+	line-height: 1;
 }
 
 nav {
 	z-index: 3;
 	position: fixed;
 	width: 100%;
+}
+
+.slow-spin {
+  -webkit-animation: fa-spin 8s infinite linear;
+  animation: fa-spin 8s infinite linear;
 }
 
 nav ul {
@@ -144,7 +271,9 @@ nav.scrolling ul {
 	opacity: .75;
 }
 
-
+span {
+	display: block;
+}
 nav ul li {
 	display: inline-block;
 	padding: 20px;
@@ -176,6 +305,12 @@ nav.scrolling ul li a:hover {
 	border: solid #F3F0E9;
 	border-width: 8px;
 	border-radius: 4px;
+}
+
+
+
+.main {
+	 background-color: #\#F3F0E9;
 }
 
 .menu-icon {
